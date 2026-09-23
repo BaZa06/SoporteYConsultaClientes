@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="848.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Label layoutX="208.0" layoutY="32.0" text="Registro de clientes">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="84.0" text="Nombre:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="143.0" layoutY="80.0" prefHeight="26.0" prefWidth="338.0" promptText="Ingrese sus nombres">
+         <font>
+            <Font name="Baskerville Old Face" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="75.0" layoutY="123.0" text="Apellidos:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellido" layoutX="143.0" layoutY="119.0" prefHeight="26.0" prefWidth="338.0" promptText="Ingrese sus apellidos">
+         <font>
+            <Font name="Baskerville Old Face" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="75.0" layoutY="161.0" text="Apellidos:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellido1" layoutX="143.0" layoutY="157.0" prefHeight="26.0" prefWidth="338.0" promptText="Ingrese sus apellidos">
+         <font>
+            <Font name="Baskerville Old Face" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="72.0" layoutY="209.0" text="Tipo de clientes:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbTipoClientes" layoutX="179.0" layoutY="206.0" prefHeight="26.0" prefWidth="302.0" promptText="Seleccione una opción" />
+      <Label layoutX="72.0" layoutY="250.0" text="Fecha de nacimiento:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dtpFechaNacimiento" layoutX="201.0" layoutY="247.0" prefHeight="26.0" prefWidth="280.0" />
+      <Label layoutX="66.0" layoutY="285.0" text="Tipo de solicitud:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbtnConsultaInformacion" layoutX="179.0" layoutY="286.0" mnemonicParsing="false" text="Consulta de información" />
+      <RadioButton fx:id="rbtnSolicitudCotizacion" layoutX="179.0" layoutY="311.0" mnemonicParsing="false" text="Solicitud de cotización" />
+      <RadioButton fx:id="rbtnContratacionServicio" layoutX="179.0" layoutY="337.0" mnemonicParsing="false" text="Contratación de servicio" />
+      <RadioButton fx:id="rbtnSoporteTecnico" layoutX="179.0" layoutY="361.0" mnemonicParsing="false" text="Soporte técnico" />
+      <RadioButton fx:id="rbtnReclamo" layoutX="179.0" layoutY="385.0" mnemonicParsing="false" text="Reclamo" />
+      <RadioButton fx:id="rbtnReclamo1" layoutX="179.0" layoutY="409.0" mnemonicParsing="false" text="Otro" />
+      <Label layoutX="48.0" layoutY="441.0" text="Servicios de interés:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chkInternet" layoutX="176.0" layoutY="442.0" mnemonicParsing="false" text="Internet" />
+      <CheckBox fx:id="chkTelefonia" layoutX="176.0" layoutY="469.0" mnemonicParsing="false" text="Telefonía" />
+      <CheckBox fx:id="chkTelevisión" layoutX="177.0" layoutY="497.0" mnemonicParsing="false" text="Televisión" />
+      <CheckBox fx:id="chkSoporteTecnico" layoutX="177.0" layoutY="525.0" mnemonicParsing="false" text="Soporte técnico" />
+      <CheckBox fx:id="chkInstalacion" layoutX="177.0" layoutY="550.0" mnemonicParsing="false" text="Instalación" />
+      <Label layoutX="55.0" layoutY="619.0" text="Fotografia:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgFotografia" fitHeight="103.0" fitWidth="141.0" layoutX="132.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnSeleccionarFoto" layoutX="257.0" layoutY="699.0" mnemonicParsing="false" onAction="#seleccionarFoto" text="Seleccionar" />
+      <TextField fx:id="txtSeleccionarFoto" editable="false" layoutX="84.0" layoutY="699.0" prefHeight="26.0" prefWidth="158.0" promptText="Seleccione una imagen" />
+      <Button fx:id="btnGuardar" layoutX="88.0" layoutY="747.0" mnemonicParsing="false" onAction="#guardarSolicitud" text="Guardar" />
+      <Button fx:id="btnLimpiar" layoutX="171.0" layoutY="747.0" mnemonicParsing="false" onAction="#limpiarControles" text="Limpiar" />
+      <Button fx:id="btnCancelar" layoutX="255.0" layoutY="747.0" mnemonicParsing="false" onAction="#cancelarSolicitud" text="Cancelar" />
+   </children>
+</AnchorPane>
