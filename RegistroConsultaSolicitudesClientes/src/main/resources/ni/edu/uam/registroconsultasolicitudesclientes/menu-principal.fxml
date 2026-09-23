@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.registroconsultasolicitudesclientes.controller.MenuRegistroController">
+    <children>
+        <Label layoutX="249.0" layoutY="117.0" text="Bienvenido/a">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="172.0" layoutY="171.0" text="Utilize el menú superior para navegar por la app" />
+        <MenuBar fx:id="menuBar" layoutY="1.0" prefHeight="25.0" prefWidth="601.0">
+            <menus>
+                <Menu fx:id="mnuCatalogo" mnemonicParsing="false" text="Catálogo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#abrirRegistroCliente" text="Registro de Clientes" />
+                        <MenuItem mnemonicParsing="false" onAction="#abrirSolicitudRegistro" text="Consulta de Clientes" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-background-color: #4224ED;" text="Archivo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+    </children>
+</AnchorPane>
+

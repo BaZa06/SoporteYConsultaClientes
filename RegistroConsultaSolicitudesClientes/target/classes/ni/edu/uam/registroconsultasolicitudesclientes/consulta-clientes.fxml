@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.shape.Line?>
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.registroconsultasolicitudesclientes.controller.ConsultaClientesController">
+    <children>
+        <Label layoutX="220.0" layoutY="14.0" text="Consulta de Clientes">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Line endX="530.0" layoutX="60.0" layoutY="45.0" opacity="0.3" startX="-100.0" />
+
+        <TableView fx:id="tblClientes" layoutX="14.0" layoutY="55.0" onMouseClicked="#abrirConsultaClientes" prefHeight="330.0" prefWidth="620.0">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre completo">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nombreCompleto" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colTipoCliente" prefWidth="110.0" text="Tipo de cliente">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="tipoCliente" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colCiudad" prefWidth="100.0" text="Ciudad">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="ciudad" />
+                    </cellValueFactory>
+
+                </TableColumn>
+                <TableColumn fx:id="colFechaNacimiento" prefWidth="130.0" text="Fecha de nacimiento">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="fechaNacimiento" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colTipoSolicitud" prefWidth="120.0" text="Tipo de solicitud">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="tipoSolicitud" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <Label layoutX="14.0" layoutY="400.0" text="Doble clic sobre un registro para ver el detalle" />
+        <Button fx:id="btnCerrar" layoutX="550.0" layoutY="396.0" mnemonicParsing="false" onAction="#cerrarConsulta" text="Cerrar" />
+    </children>
+</AnchorPane>
